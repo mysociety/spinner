@@ -6,19 +6,33 @@ A customisable CSS-only animated spinner.
 
 ## How to use this
 
-Include `spinner.scss` in your project’s Sass pipeline.
+Include `spinner.scss` in your project’s Sass pipeline, eg:
 
-The variables at the top of `spinner.scss` are declared as [defaults](https://sass-lang.com/documentation/variables#default-values) so if you want to customise the spinner, you don’t need to edit those variables in-place, you can override them elsewhere in your Sass files, before `spinner.scss` is imported.
+```scss
+@include "spinner";
+```
+
+The variables at the top of `spinner.scss` are declared as [defaults](https://sass-lang.com/documentation/variables#default-values) so if you want to customise the spinner, you don’t need to edit those variables in-place, you can override them elsewhere in your Sass files, before `spinner.scss` is imported, eg:
+
+```scss
+$mysoc-spinner-diameter: 3em;
+$mysoc-spinner-thickness: 0.25em;
+$mysoc-spinner-color: inherit;
+
+@include "spinner";
+```
 
 Since the spinner’s colour is based on the `.mysoc-spinner` element’s `color` style, you can also override it in the HTML or via JavaScript, like so:
 
-    <!-- HTML inline style -->
-    <div class="mysoc-spinner" style="color: pink"></div>
+```html
+<!-- HTML inline style -->
+<div class="mysoc-spinner" style="color: pink"></div>
 
-    <!-- or via JavaScript -->
-    <script>
-    document.querySelector('.mysoc-spinner').style.color = "pink";
-    </script>
+<!-- or via JavaScript -->
+<script>
+document.querySelector('.mysoc-spinner').style.color = "pink";
+</script>
+```
 
 ## Browser support
 
@@ -34,7 +48,7 @@ If you don’t care about support for old Webkit browsers, you can set the `$mys
 |:---:|:----:|:-------:|:------:|:------:|:----------:|
 | 10+ |  All |   16+   |   43+  |   9+   |     9+     |
 
-## How to run this locally
+## How to run the demo locally
 
 You will need the [Sass command line executable](https://sass-lang.com/install) installed. Then, run:
 
