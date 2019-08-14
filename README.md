@@ -10,6 +10,16 @@ Include `spinner.scss` in your project’s Sass pipeline.
 
 The variables at the top of `spinner.scss` are declared as [defaults](https://sass-lang.com/documentation/variables#default-values) so if you want to customise the spinner, you don’t need to edit those variables in-place, you can override them elsewhere in your Sass files, before `spinner.scss` is imported.
 
+Since the spinner’s colour is based on the `.mysoc-spinner` element’s `color` style, you can also override it in the HTML or via JavaScript, like so:
+
+    <!-- HTML inline style -->
+    <div class="mysoc-spinner" style="color: pink"></div>
+
+    <!-- or via JavaScript -->
+    <script>
+    document.querySelector('.mysoc-spinner').style.color = "pink";
+    </script>
+
 ## Browser support
 
 This spinner relies on CSS Transforms and CSS Animations. It includes `-webkit-transform` and `-webkit-animation` fallbacks. That means it works on:

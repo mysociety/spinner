@@ -25,13 +25,14 @@ $mysoc-spinner-webkit-compatibility: true !default;
         -webkit-animation: $mysoc-spinner-duration linear mysoc-spinner-spin infinite;
     }
     animation: $mysoc-spinner-duration linear mysoc-spinner-spin infinite;
+    color: $mysoc-spinner-color;
 
     &:before,
     &:after {
         content: "";
         box-sizing: border-box;
         display: block;
-        border: $mysoc-spinner-thickness solid $mysoc-spinner-color;
+        border: $mysoc-spinner-thickness solid currentColor;
     }
 
     &:before {
