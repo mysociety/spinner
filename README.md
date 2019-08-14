@@ -2,6 +2,8 @@
 
 A customisable CSS-only animated spinner.
 
+![example](demo/screengrab.gif)
+
 ## How to use this
 
 Include `spinner.scss` in your project’s Sass pipeline.
