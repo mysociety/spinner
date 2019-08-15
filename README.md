@@ -34,6 +34,12 @@ document.querySelector('.mysoc-spinner').style.color = "pink";
 </script>
 ```
 
+## Accessibility
+
+The demo at `demo/index.html` includes `role="status"` and a visually hidden text label for the spinner, to improve accessibility. There are cases when this default markup might not be suitable – remind yourself of [when and how to use the ARIA `status` role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role).
+
+You should also consider the contrast level between the `$mysoc-spinner-color` and its background. [WCAG 2.1 requires a contrast ratio of 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) for Level AA compliance.
+
 ## Browser support
 
 This spinner relies on CSS Transforms and CSS Animations. It includes `-webkit-transform` and `-webkit-animation` fallbacks. That means it works on:
