@@ -9,7 +9,7 @@ A customisable CSS-only animated spinner.
 Include `spinner.scss` in your project’s Sass pipeline, eg:
 
 ```scss
-@include "spinner";
+@import "spinner";
 ```
 
 The variables at the top of `spinner.scss` are declared as [defaults](https://sass-lang.com/documentation/variables#default-values) so if you want to customise the spinner, you don’t need to edit those variables in-place, you can override them elsewhere in your Sass files, before `spinner.scss` is imported, eg:
@@ -19,7 +19,7 @@ $mysoc-spinner-diameter: 3em;
 $mysoc-spinner-thickness: 0.25em;
 $mysoc-spinner-color: inherit;
 
-@include "spinner";
+@import "spinner";
 ```
 
 Since the spinner’s colour is based on the `.mysoc-spinner` element’s `color` style, you can also override it in the HTML or via JavaScript, like so:
